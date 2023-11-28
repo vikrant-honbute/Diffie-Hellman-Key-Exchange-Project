@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffie-Hellman Key Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Diffie-Hellman Key Exchange Demonstration</h1>
+        <p>Group Members:</p>
+        <ul>
+            <li>VIKRANT HONBUTE (22210693)</li>
+            <li>SHREYASH BHOSALE (22211473)</li>
+            <li>LAKSH KHOBRAGADE (22211071)</li>
+            <li>RIJUL PIMPLE (22211047)</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="party">
+            <h2>Party A</h2>
+            <form id="formA" onsubmit="performKeyExchange('A'); return false;">
+                <label for="primeA">Prime Number:</label>
+                <input type="text" id="primeA" required>
+                <label for="generatorA">Generator:</label>
+                <input type="text" id="generatorA" required>
+                <label for="privateKeyA">Private Key:</label>
+                <input type="text" id="privateKeyA" required>
+                <label for="messageA">Message:</label>
+                <input type="text" id="messageA" required>
+                <button type="submit">Perform Key Exchange</button>
+            </form>
+        </div>
+
+        <div class="party">
+            <h2>Party B</h2>
+            <form id="formB" onsubmit="performKeyExchange('B'); return false;">
+                <label for="primeB">Prime Number:</label>
+                <input type="text" id="primeB" required>
+                <label for="generatorB">Generator:</label>
+                <input type="text" id="generatorB" required>
+                <label for="privateKeyB">Private Key:</label>
+                <input type="text" id="privateKeyB" required>
+                <label for="messageB">Message:</label>
+                <input type="text" id="messageB" required>
+                <button type="submit">Perform Key Exchange</button>
+            </form>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
